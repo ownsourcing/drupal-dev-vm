@@ -3,4 +3,6 @@
 vagrant_ansible_inventory_default
 # config.yml
 # drupal.make.yml
+drupal/
+html/
 examples/prod/inventory
