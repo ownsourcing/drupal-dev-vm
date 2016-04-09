@@ -1,3 +1,7 @@
+This is a fork of the wonderful DrupalVM setup created to test the even
+more wonderful decoupled_blocks development. Eventually better someone
+smarter (or more sober) will push actual install instructions.
+
 ![Drupal VM Logo](https://raw.githubusercontent.com/geerlingguy/drupal-vm/master/docs/images/drupal-vm-logo.png)
 
 [![Build Status](https://travis-ci.org/geerlingguy/drupal-vm.svg?branch=master)](https://travis-ci.org/geerlingguy/drupal-vm) [![Documentation Status](https://readthedocs.org/projects/drupal-vm/badge/?version=latest)](http://docs.drupalvm.com)

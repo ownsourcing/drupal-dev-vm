@@ -7,9 +7,9 @@ vagrant_synced_folder_default_type: nfs
 
 # If you need to run multiple instances of Drupal VM, set a unique hostname,
 # machine name, and IP address for each instance.
-vagrant_hostname: drupalvm.dev
-vagrant_machine_name: drupalvm
-vagrant_ip: 192.168.88.88
+vagrant_hostname: decoupled.dev
+vagrant_machine_name: decoupled
+vagrant_ip: 192.168.88.94
 
 # Allow Drupal VM to be accessed via a public network interface on your host.
 # Vagrant boxes are insecure by default, so be careful. You've been warned!
@@ -22,8 +22,8 @@ vagrant_public_ip: ""
 vagrant_synced_folders:
   # The first synced folder will be used for the default Drupal installation, if
   # build_makefile: is 'true'.
-  - local_path: ~/Sites/drupalvm
-    destination: /var/www/drupalvm
+  - local_path: ~/Sites/decoupled.dev
+    destination: /var/www/decoupled.dev
     type: nfs
     create: true
 
@@ -46,9 +46,9 @@ install_site: true
 # Settings for building a Drupal site from a makefile (if 'build_makefile:'
 # is 'true').
 drupal_major_version: 8
-drupal_core_path: "/var/www/drupalvm/drupal"
+drupal_core_path: "/var/www/decoupled.dev/drupal"
 drupal_domain: "{{ vagrant_hostname }}"
-drupal_site_name: "Drupal"
+drupal_site_name: "Decoupled Blocks"
 drupal_install_profile: standard
 drupal_enable_modules: [ 'devel' ]
 drupal_account_name: admin
