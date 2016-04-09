@@ -20,9 +20,9 @@ projects:
   # Other modules.
   devel: "1.x-dev"
   decoupled_blocks:
-    type: "contrib"
     download:
       type: "git"
       url: "git://github.com/mrjmd/decoupled_blocks.git"
       branch: "8.x-1.x"
+      working-copy: true
 
