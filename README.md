@@ -2,6 +2,26 @@ This is a fork of the wonderful DrupalVM setup created to test the even
 more wonderful decoupled_blocks development. Eventually better someone
 smarter (or more sober) will push actual install instructions.
 
+# Quick Install
+1. `cd ~/Sites`
+1. `git clone git@github.com:mark-casias/decoupled-blocks-drupal-vm.git decoupled.dev`
+1. `cd decoupled.dev`
+1. `sudo ansible-galaxy install -r provisioning/requirements.yml --force`
+1. `cp example.config.yml config.yml`
+1. `cp example.drupal.make.yml drupal.make.yml`
+1. `vagrant up`
+1. Go get coffee. Read a book.
+1. `cd drupal`
+1. `drush @decoupled.dev uli`
+1. Get to work.
+1. profit.
+
+### notes
+* If you change your path from *~/Sites*, you'll have to update the config.yml.
+* One day I'll add a hook to enable the modules. Till then, do it yourself.
+
+## Drupal VM official instructions
+
 ![Drupal VM Logo](https://raw.githubusercontent.com/geerlingguy/drupal-vm/master/docs/images/drupal-vm-logo.png)
 
 [![Build Status](https://travis-ci.org/geerlingguy/drupal-vm.svg?branch=master)](https://travis-ci.org/geerlingguy/drupal-vm) [![Documentation Status](https://readthedocs.org/projects/drupal-vm/badge/?version=latest)](http://docs.drupalvm.com)
