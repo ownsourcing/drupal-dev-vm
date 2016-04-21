@@ -14,16 +14,15 @@ projects:
     type: "core"
     download:
       # Drupal core branch (e.g. "6.x", "7.x", "8.0.x").
-      branch: "8.0.6"
+      branch: "8.1.x"
       working-copy: false
 
   # Other modules.
   devel: "1.x-dev"
   admin_toolbar: "1.14"
-  decoupled_blocks:
+  pdb:
     download:
       type: "git"
       url: "git://github.com/mrjmd/decoupled_blocks.git"
       branch: "8.x-1.x"
       working-copy: true
-
