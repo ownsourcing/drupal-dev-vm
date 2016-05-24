@@ -30,13 +30,13 @@ smarter (or more sober) will push actual install instructions.
 
 This project aims to make spinning up a simple local Drupal test/development environment incredibly quick and easy, and to introduce new developers to the wonderful world of Drupal development on local virtual machines (instead of crufty old MAMP/WAMP-based development).
 
-It will install the following on an Ubuntu 14.04 (by default) linux VM:
+It will install the following on an Ubuntu 16.04 (by default) linux VM:
 
   - Apache 2.4.x (or Nginx 1.x)
-  - PHP 5.6.x (configurable)
-  - MySQL 5.5.x
+  - PHP 7.0.x (configurable)
+  - MySQL 5.7.x
   - Drush (configurable)
-  - Drupal 6.x, 7.x, or 8.x.x (configurable)
+  - Drupal 7.x, or 8.x.x (configurable)
   - Optional:
     - Drupal Console
     - Varnish 4.x (configurable)
@@ -46,7 +46,9 @@ It will install the following on an Ubuntu 14.04 (by default) linux VM:
     - Ruby
     - Memcached
     - Redis
+    - SQLite
     - XHProf, for profiling your code
+    - Blackfire, for profiling your code
     - XDebug, for debugging your code
     - Adminer, for accessing databases directly
     - Pimp my Log, for easy viewing of log files
@@ -67,7 +69,7 @@ There are a couple places where you can customize the VM for your needs:
   - `config.yml`: Contains variables like the VM domain name and IP address, PHP and MySQL configuration, etc.
   - `drupal.make.yml`: Contains configuration for the Drupal core version, modules, and patches that will be downloaded on Drupal's initial installation (more about [Drush make files](https://www.drupal.org/node/1432374)).
 
-If you want to switch from Drupal 8 (default) to Drupal 7 or 6 on the initial install, do the following:
+If you want to switch from Drupal 8 (default) to Drupal 7 on the initial install, do the following:
 
   1. Update the Drupal `version` and `core` inside the `drupal.make.yml` file.
   2. Update `drupal_major_version` inside `config.yml`.
@@ -113,9 +115,11 @@ By default, this VM includes the extras listed in the `config.yml` option `insta
 
     installed_extras:
       - adminer
+      # - blackfire
       - drupalconsole
       - mailhog
-      - memcached
+      # - memcached
+      # - newrelic
       # - nodejs
       - pimpmylog
       # - redis
@@ -123,8 +127,8 @@ By default, this VM includes the extras listed in the `config.yml` option `insta
       # - selenium
       # - solr
       - varnish
-      - xdebug
-      - xhprof
+      # - xdebug
+      # - xhprof
 
 If you don't want or need one or more of these extras, just delete them or comment them from the list. This is helpful if you want to reduce PHP memory usage or otherwise conserve system resources.
 
